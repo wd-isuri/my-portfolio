@@ -1,0 +1,293 @@
+<html>
+    <head>
+        <title>My Portfolio</title>
+        <link rel ="stylesheet" type ="text/css" href = "css/style.css">
+        <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    </head>
+    <body>
+        <div class ="navbar">
+            <h1 class="logo">ISURI</h1>
+
+            <div class="menu">
+                <ul>
+                    <li><a href="#intro">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Project</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+
+       <!--Section Intro-->
+<section id="intro" class="intro">
+  <div class="intro-container">
+    <div class="intro-image">
+      <img src="images/me-modified.png" alt="ISURI RUWANYA">
+    </div>
+    <div class="intro-text">
+      <h2>Hello, I'm <span class="fade-name">ISURI RUWANYA</span></h2>
+      <p>A passionate Web Developer & Student dedicated to learning modern technologies and creating user-friendly digital solutions.<br> I specialize in HTML, CSS, C, and OOP, and I’m currently exploring UI/UX design tools like Figma and Adobe Illustrator.</p>
+      <a href="https://github.com/wd-isuri" class="btn">View My Project in GitHub</a>
+    </div>
+  </div>
+</section>
+
+<script>
+  function showIntro() {
+    const intro = document.querySelector(".intro");
+    const introPosition = intro.getBoundingClientRect().top;
+    const screenPosition = window.innerHeight / 1.2;
+
+    if (introPosition < screenPosition) {
+      intro.classList.add("show");
+    }
+  }
+
+  window.addEventListener("load", showIntro);
+
+  window.addEventListener("scroll", showIntro);
+</script>
+
+
+
+    <!-- About section -->
+<section id="about">
+  <div class="about-container">
+    <div class="about-image">
+      <img src="images/me3-modified.png" alt="Isuri">
+    </div>
+    <div class="about-text">
+      <h2>About Me</h2>
+      <p>
+        I am an undergraduate student at Sabaragamuwa University of Sri Lanka, pursuing a BSc (Hons) in Information Systems. I have experience in HTML, CSS, C, Object-Oriented Programming (OOP), and Database Systems, along with a growing interest in UI/UX design.<br>
+
+        In addition to coding, I enjoy creating visually appealing designs using Adobe Illustrator and Figma. These tools allow me to blend creativity with functionality, ensuring that the projects I work on are not only efficient but also user-friendly and attractive.<br>
+
+        I am passionate about web development and design, and I constantly seek opportunities to learn new technologies and improve my skills. My future goal is to become a full-stack developer and UI/UX designer, contributing to impactful digital solutions that enhance user experiences.
+      </p>
+    </div>
+  </div>
+</section>
+
+<script>
+  function revealOnScroll() {
+    const sections = document.querySelectorAll(".intro, .about-container"); // add more if needed
+    const screenPosition = window.innerHeight / 1.2;
+
+    sections.forEach(section => {
+      const sectionPosition = section.getBoundingClientRect().top;
+
+      if (sectionPosition < screenPosition) {
+        section.classList.add("show");
+      }
+    });
+  }
+
+  window.addEventListener("scroll", revealOnScroll);
+</script>
+
+      <!--Section skills-->
+<section id="skills">
+  <h2>My Skills</h2>
+  <div class="skills-container">
+    
+    <!-- Column 1 -->
+    <div class="skill-column">
+      <div class="skill">
+        <h3>HTML</h3>
+        <div class="skill-bar">
+          <div class="skill-level" data-width="90%"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <h3>CSS</h3>
+        <div class="skill-bar">
+          <div class="skill-level" data-width="85%"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <h3>Javascript</h3>
+        <div class="skill-bar">
+          <div class="skill-level" data-width="50%"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <h3>OOP</h3>
+        <div class="skill-bar">
+          <div class="skill-level" data-width="60%"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Column 2 -->
+    <div class="skill-column">
+      <div class="skill">
+        <h3>C Programming</h3>
+        <div class="skill-bar">
+          <div class="skill-level" data-width="80%"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <h3>Python</h3>
+        <div class="skill-bar">
+          <div class="skill-level" data-width="70%"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <h3>Figma</h3>
+        <div class="skill-bar">
+          <div class="skill-level" data-width="70%"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <h3>Adobe Illustrator</h3>
+        <div class="skill-bar">
+          <div class="skill-level" data-width="80%"></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<script>
+  function animateSkills() {
+    const skills = document.querySelectorAll(".skill-level");
+    const screenHeight = window.innerHeight;
+
+    skills.forEach(skill => {
+      const skillPosition = skill.getBoundingClientRect();
+
+      if (skillPosition.top < screenHeight && !skill.classList.contains("animated")) {
+        const finalWidth = skill.getAttribute("data-width");
+        skill.style.width = finalWidth;
+        skill.classList.add("animated"); 
+      }
+    });
+  }
+
+  window.addEventListener("scroll", animateSkills);
+  window.addEventListener("load", animateSkills);
+</script>
+
+  <!--project section-->
+<section id="projects">
+  <h2>My Projects</h2>
+  <div class="projects-container">
+    <div class="project-card">
+      <img src="images/Screenshot 2025-09-07 185130.png" alt="Project 1">
+      <h3>Travel Website</h3>
+      <p>A static website built with HTML and CSS about Sri Lankan travel.</p>
+      <a href="https://wd-isuri.github.io/travel-website/ "target="_blank">View on GitHub</a>
+    </div>
+
+    <div class="project-card">
+      <img src="images/Screenshot 2025-09-07 190844.png" alt="Project 2">
+      <h3>Portfolio Website</h3>
+      <p>Personal portfolio showcasing my skills and projects.</p>
+      <a href="https://github.com/wd-isuri/my-portfolio" target="_blank">View on GitHub</a>
+    </div>
+  </div>
+</section>
+
+<script>
+  const projectCards = document.querySelectorAll('.project-card');
+
+  function animateProjects() {
+    const screenHeight = window.innerHeight;
+
+    projectCards.forEach(card => {
+      const cardTop = card.getBoundingClientRect().top;
+
+      if (cardTop < screenHeight - 50) { 
+        card.style.opacity = '1';
+        card.style.transform = 'translateY(0)';
+      }
+    });
+  }
+
+  window.addEventListener('scroll', animateProjects);
+  window.addEventListener('load', animateProjects);
+</script>
+
+
+      <!-- Contact Section -->
+<section id="contact">
+  <h2>Contact Me</h2>
+  <div class="contact-container">
+    
+    <!-- Left Column: Message Form -->
+    <div class="contact-form">
+      <h3>Send Me a Message</h3>
+      <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </div>
+
+    <!-- Right Column: Contact Info -->
+    <div class="contact-info">
+      <p>Email: 
+        <a href="mailto:isuriaqu@gmail.com">isuriaqu@gmail.com</a> |
+        <a href="mailto:22fis0477@ms.sab.ac.lk">22fis0477@ms.sab.ac.lk</a>
+      </p>
+      <p>Phone Number: 076 6884803</p>
+      <p><i class="ri-linkedin-box-fill"></i> LinkedIn: 
+        <a href="https://www.linkedin.com/in/isuri-ruwanya-b3a065335/" target="_blank">isuri-ruwanya</a>
+      </p>
+      <p><i class="ri-github-fill"></i> GitHub: 
+        <a href="https://github.com/wd-isuri/my-portfolio" target="_blank">wd-isuri</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<script>
+    const contactElements = document.querySelectorAll('.contact-form, .contact-info');
+
+    function revealOnScroll() {
+      const windowHeight = window.innerHeight;
+      contactElements.forEach(el => {
+        const elementTop = el.getBoundingClientRect().top;
+        const elementVisible = 150;
+        if (elementTop < windowHeight - elementVisible) {
+          el.classList.add('active');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', revealOnScroll);
+    window.addEventListener('load', revealOnScroll);
+  </script>
+</body>
+
+
+
+
+
+
+<!-- Footer -->
+<footer>
+  <p>&copy; 2025 ISURI. All rights reserved.</p>
+
+  <div class="social-icons">
+    <a href="https://github.com/wd-isuri" target="_blank"><i class="ri-github-fill"></i>GitHub</a> |
+    <a href="https://www.linkedin.com/in/isuri-ruwanya-b3a065335/" target="_blank"><i class="ri-linkedin-box-fill"></i>LinkedIn</a>
+  </div>
+
+  <div class="footer-links">
+    <a href="#intro">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
+</footer>
+</body>
+</html>
