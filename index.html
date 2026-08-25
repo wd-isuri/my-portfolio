@@ -28,9 +28,17 @@
       <img src="images/me-modified.png" alt="ISURI RUWANYA">
     </div>
     <div class="intro-text">
-      <h2>Hello, I'm <span class="fade-name">ISURI RUWANYA</span></h2>
-      <p>A passionate Web Developer & Student dedicated to learning modern technologies and creating user-friendly digital solutions.<br> I specialize in HTML, CSS, C, and OOP, and I’m currently exploring UI/UX design tools like Figma and Adobe Illustrator.</p>
-      <a href="https://github.com/wd-isuri" class="btn">View My Project in GitHub</a>
+     <h2>Hello, I'm <span class="fade-name">ISURI RUWANYA</span></h2>
+
+        <p>
+          I'm an Information Systems undergraduate passionate about software development,
+          web technologies, and UI/UX design. I enjoy building user-friendly and
+          responsive digital solutions while continuously learning modern technologies.
+        </p>
+        
+        <a href="https://github.com/wd-isuri" class="btn" target="_blank">
+          View My GitHub
+        </a>
     </div>
   </div>
 </section>
@@ -61,20 +69,29 @@
     </div>
     <div class="about-text">
       <h2>About Me</h2>
-      <p>
-        I am an undergraduate student at Sabaragamuwa University of Sri Lanka, pursuing a BSc (Hons) in Information Systems. I have experience in HTML, CSS, C, Object-Oriented Programming (OOP), and Database Systems, along with a growing interest in UI/UX design.<br>
-
-        In addition to coding, I enjoy creating visually appealing designs using Adobe Illustrator and Figma. These tools allow me to blend creativity with functionality, ensuring that the projects I work on are not only efficient but also user-friendly and attractive.<br>
-
-        I am passionate about web development and design, and I constantly seek opportunities to learn new technologies and improve my skills. My future goal is to become a full-stack developer and UI/UX designer, contributing to impactful digital solutions that enhance user experiences.
-      </p>
+        <p>
+          I am an undergraduate student at Sabaragamuwa University of Sri Lanka,
+          pursuing a BSc (Hons) in Information Systems. I have experience in HTML,
+          CSS, JavaScript, C, Java, Object-Oriented Programming (OOP), and Database
+          Systems. I am also developing my skills in React.js and Tailwind CSS for
+          modern web development.<br><br>
+        
+          In addition to coding, I enjoy creating visually appealing designs using
+          Adobe Illustrator and Figma. I enjoy combining creativity with
+          functionality to create user-friendly and engaging digital solutions.<br><br>
+        
+          I am passionate about software development and UI/UX design and continuously
+          seek opportunities to learn new technologies and improve my skills. My goal
+          is to become a full-stack developer and UI/UX designer, contributing to
+          impactful digital solutions that enhance user experiences.
+        </p>
     </div>
   </div>
 </section>
 
 <script>
   function revealOnScroll() {
-    const sections = document.querySelectorAll(".intro, .about-container"); // add more if needed
+    const sections = document.querySelectorAll(".intro, .about-container"); 
     const screenPosition = window.innerHeight / 1.2;
 
     sections.forEach(section => {
@@ -114,6 +131,18 @@
           <div class="skill-level" data-width="50%"></div>
         </div>
       </div>
+        <div class="skill">
+      <h3>React.js</h3>
+      <div class="skill-bar">
+        <div class="skill-level" data-width="70%"></div>
+      </div>
+    </div>
+    <div class="skill">
+      <h3>Tailwind CSS</h3>
+      <div class="skill-bar">
+        <div class="skill-level" data-width="70%"></div>
+      </div>
+    </div>
       <div class="skill">
         <h3>OOP</h3>
         <div class="skill-bar">
@@ -178,6 +207,28 @@
 <section id="projects">
   <h2>My Projects</h2>
   <div class="projects-container">
+      <div class="project-card">
+      <img src="images/sentrypod.png" alt="Sentry-Pod AI NMS">
+
+      <h3>Sentry-Pod AI NMS</h3>
+
+      <p>
+        A containerized Network Management System for intent-based networking.
+        The system uses AI to translate natural language instructions into
+        Cisco IOS commands and supports network automation, monitoring,
+        configuration management, and human-in-the-loop approval.
+      </p>
+
+      <p>
+        <strong>Technologies:</strong>
+        Python, FastAPI, React.js, Tailwind CSS, PostgreSQL,
+        Ansible, Podman, Cisco IOS, Groq AI
+      </p>
+
+      <a href="https://github.com/SanujaMenath/Sentry-Pod" target="_blank" rel="noopener noreferrer">
+          <i class="ri-github-fill"></i> View on GitHub
+    </a>
+    </div>
     <div class="project-card">
       <img src="images/Screenshot 2025-09-07 185130.png" alt="Project 1">
       <h3>Travel Website</h3>
@@ -265,12 +316,6 @@
     window.addEventListener('scroll', revealOnScroll);
     window.addEventListener('load', revealOnScroll);
   </script>
-</body>
-
-
-
-
-
 
 <!-- Footer -->
 <footer>
